@@ -1,0 +1,9 @@
+.card__likes-amount {
+    width: 9px;
+    height: 13px;
+    margin-top: 3px;
+    margin-right: 15px;
+    font-size: 13px;
+    line-height: 1.23;
+    text-align: center;
+}

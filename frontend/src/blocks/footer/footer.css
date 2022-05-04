@@ -1,0 +1,18 @@
+.footer {
+    color: #545454;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.21;
+    margin: 68px 0px 60px;
+    max-width: 880px;
+    width: calc(100% - 38px);
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+@media screen and (max-width: 550px) {
+    .footer {
+        font-size: 14px;
+        margin: 50px 0px 36px;
+    }
+}

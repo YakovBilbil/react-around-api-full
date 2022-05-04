@@ -1,0 +1,5 @@
+.popup__container {
+    position: relative;
+    -ms-flex-item-align: center;
+    align-self: center;
+}

@@ -1,0 +1,9 @@
+.cards {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .cards {
+        width: calc(100% - 38px);
+    }
+}

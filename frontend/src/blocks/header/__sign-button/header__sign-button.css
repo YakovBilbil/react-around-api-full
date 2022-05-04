@@ -1,0 +1,38 @@
+.header__sign-button {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.21;
+    height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-transition: opacity 0.2s linear 0.2s;
+    -o-transition: opacity 0.2s linear 0.2s;
+    transition: opacity 0.2s linear 0.2s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-item-align: end;
+    align-self: flex-start;
+    padding: 0px;
+    justify-self: flex-end;
+    margin-left: 24px;
+}
+
+.header__sign-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .header__sign-button {
+        margin: 18px 0px 0px 0px;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+}

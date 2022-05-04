@@ -1,0 +1,25 @@
+.popup__form-close-button {
+    position: absolute;
+    top: -38px;
+    right: -38px;
+    -webkit-transition: opacity 0.2s linear 0.2s;
+    -o-transition: opacity 0.2s linear 0.2s;
+    transition: opacity 0.2s linear 0.2s;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: inherit;
+    outline: none;
+}
+
+.popup__form-close-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__form-close-button {
+        right: 5px;
+        top: -48px;
+    }
+}

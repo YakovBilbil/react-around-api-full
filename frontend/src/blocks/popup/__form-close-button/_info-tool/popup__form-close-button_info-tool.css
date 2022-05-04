@@ -1,0 +1,5 @@
+@media screen and (max-width: 550px) {
+    .popup__form-close-button_info-tool {
+        right: 127px;
+    }
+}

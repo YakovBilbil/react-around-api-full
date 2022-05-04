@@ -1,0 +1,21 @@
+.profile__edit-avatar-button {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color 0.2s linear 0s;
+    -o-transition: background-color 0.2s linear 0s;
+    transition: background-color 0.2s linear 0s;
+    margin-right: 29px;
+}
+
+.profile__edit-avatar-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 550px) {
+    .profile__edit-avatar-button {
+        margin-right: 0px;
+    }
+}

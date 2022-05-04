@@ -1,0 +1,40 @@
+.popup__form-save-button {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.21;
+    width: 358px;
+    height: 50.15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 18.26px 36px 36.51px;
+    border-radius: 2px;
+    -webkit-transition: opacity 0.2s linear 0.2s;
+    -o-transition: opacity 0.2s linear 0.2s;
+    transition: opacity 0.2s linear 0.2s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+}
+
+.popup__form-save-button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .popup__form-save-button {
+        width: 238px;
+        height: 46px;
+        font-size: 14px;
+        margin: 16.26px 22px 25px;
+    }
+}

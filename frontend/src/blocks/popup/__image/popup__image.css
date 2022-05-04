@@ -1,0 +1,14 @@
+.popup__image {
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: none;
+}
+
+@media screen and (max-width: 320px) {
+    .popup__image {
+        width: 240px;
+        height: 299px;
+    }
+}

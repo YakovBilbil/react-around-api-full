@@ -1,0 +1,35 @@
+.profile__edit-profile-button {
+    max-height: 24px;
+    grid-column: 2;
+    grid-row: 1;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: inherit;
+    outline: none;
+    -webkit-transition: opacity 0.2s linear 0.2s;
+    -o-transition: opacity 0.2s linear 0.2s;
+    transition: opacity 0.2s linear 0.2s;
+}
+
+.profile__edit-profile-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .profile__edit-profile-button {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 65px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .profile__edit-profile-button {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: 10px;
+        margin-top: 28px;
+    }
+}

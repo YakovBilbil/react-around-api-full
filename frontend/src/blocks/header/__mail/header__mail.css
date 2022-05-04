@@ -1,0 +1,26 @@
+.header__mail {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.21;
+    height: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-item-align: end;
+    align-self: flex-start;
+    margin-left: 24px;
+}
+
+@media screen and (max-width: 550px) {
+    .header__mail {
+        margin: 0px;
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+}
