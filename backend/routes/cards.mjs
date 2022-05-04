@@ -15,7 +15,7 @@ router.post("/", celebrate({
         name: Joi.string().required().min(2).max(30),
         link: Joi.string().required().custom(validateURL),
         owner: Joi.required(),
-        createdAt: Joi.string().required().date()
+        createdAt: Joi.string().required().isoDate()
     })
 }), createCard);
 
