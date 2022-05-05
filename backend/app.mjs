@@ -6,6 +6,7 @@ import helmet from "helmet";
 import { mongoServerAddress, limiter } from "./utils/config.mjs"
 import { requestLogger, errorLogger } from "./middlewares/logger.mjs"
 import { errors } from "celebrate";
+import cors from "cors";
 
 mongoose.connect(mongoServerAddress);
 
@@ -17,6 +18,10 @@ app.use(helmet());
 app.use(limiter);
 
 app.use(bodyParser.json());
+
+app.use(cors());
+
+app.options('*', cors());
 
 app.use(requestLogger);
 

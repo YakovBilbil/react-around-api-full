@@ -23,7 +23,8 @@
         "eject": "react-scripts eject",
         "precommit": "pretty-quick --staged",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "serverdeploy": "npm run build && scp -r ./build/* yakov_bilbil@yakovBilbilProj15.students.nomoreparties.sbs:/home/yakov_bilbil/react-around-api-full/frontend"
     },
     "eslintConfig": {
         "extends": [

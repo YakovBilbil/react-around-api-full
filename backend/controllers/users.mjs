@@ -21,22 +21,6 @@ const getUsers = async(req, res) => {
     }
 };
 
-/*
-const getUserById = async(req, res) => {
-    try {
-        const user = await User.findOne({ _id: req.params.user_id });
-        if (!user) {
-            res.status(NOT_FOUND_ERROR).send({
-                message: "User ID not found",
-            });
-        } else {
-            res.send(user);
-        }
-    } catch (error) {
-        handleCatchErrors(error, res);
-    }
-};
-*/
 
 const createUser = async(req, res) => {
     try {
@@ -69,19 +53,6 @@ const login = async(req, res) => {
     } catch (next) {}
 };
 
-/*
-const login = async(req, res) => {
-    const { email, password } = req.body;
-    try {
-        const user = await User.findUserByCredentials(email, password);
-        const token = jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: "7d" });
-        res.json({ token });
-    } catch (err) {
-        res.status(401).send({ message: err.message });
-    }
-};
-
-*/
 
 const getUserData = async(req, res) => {
     try {
@@ -93,16 +64,6 @@ const getUserData = async(req, res) => {
     } catch (next) {}
 };
 
-/*
-const getUserData = async(req, res) => {
-    try {
-        const user = await User.findOne({ _id: req.user._id });
-        res.send(user);
-    } catch (err) {
-        res.status(500).send({ message: 'Error' });
-    }
-};
-*/
 
 const updateUserProfile = async(req, res) => {
     try {
@@ -137,7 +98,6 @@ const updateUserAvatar = async(req, res) => {
 
 export {
     getUsers,
-    // getUserById,
     createUser,
     getUserData,
     updateUserProfile,

@@ -1,7 +1,6 @@
 import express from "express";
 import {
     getUsers,
-    // getUserById,
     getUserData,
     updateUserProfile,
     updateUserAvatar,
@@ -14,8 +13,6 @@ const router = express.Router();
 router.get("/", celebrate({
     headers: Joi.object().keys({}).unknown(true),
 }), getUsers);
-
-// router.get("/:user_id", getUserById);
 
 router.get("/me", celebrate({
         headers: Joi.object().keys({}).unknown(true)
@@ -43,7 +40,5 @@ router.patch("/me/avatar", celebrate({
         password: Joi.string().required()
     }),
 }), updateUserAvatar);
-
-
 
 export default router;
