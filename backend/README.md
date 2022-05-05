@@ -6,7 +6,7 @@
   
 `/routes` — routing files.  
   
-All other directories are optional and may be created by the developer if necessary.   
+All other directories are optional and may be created by the developer if necessary.
   
 ## Running the Project  
   
@@ -14,5 +14,6 @@ All other directories are optional and may be created by the developer if necess
   
 `npm run dev` — to launch the server with the hot reload feature.  
 
+## The link to GitHub Pages
 
-
+<www.yakovBilbilProj15.students.nomoreparties.sbs>

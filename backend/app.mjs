@@ -7,6 +7,7 @@ import { mongoServerAddress, limiter } from "./utils/config.mjs"
 import { requestLogger, errorLogger } from "./middlewares/logger.mjs"
 import { errors } from "celebrate";
 import cors from "cors";
+import 'dotenv/config';
 
 mongoose.connect(mongoServerAddress);
 
