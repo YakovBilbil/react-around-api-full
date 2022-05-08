@@ -3,17 +3,11 @@ import usersRouter from "./users.mjs";
 import cardsRouter from "./cards.mjs";
 import auth from "../middlewares/auth.mjs";
 import { createUser, login } from "../controllers/users.mjs";
-import { NOT_FOUND_ERROR } from "../utils/errorsHandle.mjs";
+import { NotFoundError } from "../utils/errorsHandle.mjs";
 import { celebrate, Joi } from "celebrate";
 import { validateURL } from "../utils/config.mjs";
 
 const router = express.Router();
-
-app.get('/crash-test', () => {
-    setTimeout(() => {
-        throw new Error('Server will crash now');
-    }, 0);
-});
 
 router.post("/signup", celebrate({
     body: Joi.object().keys({
@@ -41,10 +35,8 @@ router.use("/users", usersRouter);
 
 router.use("/cards", cardsRouter);
 
-router.use((req, res) => {
-    res.status(NOT_FOUND_ERROR).send({
-        "message": "Requested resource not found"
-    });
+router.use(() => {
+    throw new NotFoundError("Requested resource not found");
 });
 
 export default router;

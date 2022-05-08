@@ -3,6 +3,7 @@ import {
     INVALID_DATA_ERROR,
     NOT_FOUND_ERROR,
     handleCatchErrors,
+    AuthRequiredError
 } from "../utils/errorsHandle.mjs";
 
 const getCards = async(req, res) => {
@@ -42,13 +43,11 @@ const deleteCardById = async(req, res) => {
                 message: "Card ID not found",
             });
         } else {
-            if (req.user._id === card.owner) {
+            if (req.user._id === card.owner.toString()) {
                 const cardToDelete = await Card.findOneAndRemove({ _id: req.params.card_id });
                 res.send(cardToDelete);
             } else {
-                res.send({
-                    message: "Card is not owned by the User"
-                });
+                throw new AuthRequiredError("No user with matching ID found");
             }
         }
     } catch (error) {
