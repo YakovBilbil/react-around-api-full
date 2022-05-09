@@ -35,10 +35,9 @@ router.use("/users", usersRouter);
 
 router.use("/cards", cardsRouter);
 
-/*
 router.use(() => {
     throw new NotFoundError("Requested resource not found");
 });
-*/
+
 
 export default router;
