@@ -53,5 +53,7 @@
         "pg-promise": "^10.11.1",
         "validator": "^13.7.0",
         "winston": "^3.7.2"
-    }
+    },
+    "proxy": "http://localhost:3000"
+
 }
