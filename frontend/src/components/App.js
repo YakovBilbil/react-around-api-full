@@ -234,6 +234,7 @@ function App() {
                                 email: "",
                                 password: "",
                               });
+                              localStorage.setItem("jwt", false);
                               navigate("/react-around-auth/signin");
                             }}
                           >

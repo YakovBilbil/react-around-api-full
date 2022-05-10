@@ -83,25 +83,3 @@ const Login = ({ onChange, onSubmit }) => {
 };
 
 export default Login;
-
-/*
-
-<button
-          className="header__sign-button"
-          onClick={() => {
-            <Navigate to="/react-around-auth/signup" />;
-          }}
-        >
-          Sign Up
-        </button>
-
-            <button
-              type="button"
-              className="popup__form-save-button popup__form-save-button_sign"
-              onClick={(e) => {
-                e.preventDefault();
-                <Navigate to="/react-around-auth/signup" />;
-              }}
-            >
-              Not a member yet? Sign up here!
-            </button> */
