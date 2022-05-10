@@ -182,7 +182,7 @@ function App() {
     setIsInfoTooltipOpen(true);
   };
 
-  const [jwt, setJwt] = useState(localStorage.getItem("token"));
+  const [jwt, setJwt] = useState(localStorage.getItem("jwt"));
 
   useEffect(() => {
     (async function () {
@@ -234,7 +234,7 @@ function App() {
                                 email: "",
                                 password: "",
                               });
-                              localStorage.setItem("jwt", false);
+                              localStorage.setItem("jwt", "");
                               navigate("/react-around-auth/signin");
                             }}
                           >
