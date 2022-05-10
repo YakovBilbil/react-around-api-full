@@ -182,9 +182,11 @@ function App() {
     setIsInfoTooltipOpen(true);
   };
 
+  const [jwt, setJwt] = useState(localStorage.getItem("token"));
+
   useEffect(() => {
     (async function () {
-      const jwt = localStorage.getItem("jwt");
+      setJwt(localStorage.getItem("jwt"));
       if (jwt) {
         try {
           const res = await auth.checkTokenAndGetUserEmail(jwt);
@@ -199,7 +201,7 @@ function App() {
         }
       }
     })();
-  }, []);
+  });
 
   useEffect(() => {
     if (isLoggedIn) {
