@@ -22,7 +22,7 @@
     "bugs": {
         "url": "https://github.com/YakovBilbil/around-express/issues"
     },
-    "homepage": "https://yakovbilbilproj15.students.nomoreparties.sbs/",
+    "homepage": ".",
     "devDependencies": {
         "cross-env": "^7.0.3",
         "eslint": "^8.9.0",
