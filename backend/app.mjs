@@ -22,7 +22,6 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-
 app.options('*', cors());
 
 app.get('/crash-test', () => {
