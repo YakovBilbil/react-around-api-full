@@ -47,7 +47,6 @@ function App() {
   }, []);
 
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
   }
@@ -64,7 +63,6 @@ function App() {
   };
 
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
-
   function handleEditProfileClick() {
     setIsEditProfilePopupOpen(true);
   }
@@ -81,7 +79,6 @@ function App() {
   };
 
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
-
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
@@ -97,7 +94,6 @@ function App() {
 
   const [cardForDelete, setCardForDelete] = useState({});
   const [isVerifyDeletePopupOpen, setIsVerifyDeletePopupOpen] = useState(false);
-
   function handleTrashClick(cardForDelete) {
     setIsVerifyDeletePopupOpen(true);
     setCardForDelete(cardForDelete);
@@ -114,7 +110,6 @@ function App() {
 
   const [cardForImagePopup, setCardForImagePopup] = useState({});
   const [isCardPopupOpen, setIsCardPopupOpen] = useState(false);
-
   function handleCardClick(cardForImagePopup) {
     setIsCardPopupOpen(true);
     setCardForImagePopup(cardForImagePopup);
@@ -182,11 +177,9 @@ function App() {
     setIsInfoTooltipOpen(true);
   };
 
-  const [jwt, setJwt] = useState(localStorage.getItem("token"));
-
   useEffect(() => {
     (async function () {
-      setJwt(localStorage.getItem("jwt"));
+      const jwt = localStorage.getItem("jwt");
       if (jwt) {
         try {
           const res = await auth.checkTokenAndGetUserEmail(jwt);
@@ -201,7 +194,7 @@ function App() {
         }
       }
     })();
-  });
+  }, []);
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -222,10 +215,7 @@ function App() {
                     <>
                       <Header>
                         <div className="header__log-out-mail-block">
-                          <div className="header__mail">
-                            {" "}
-                            {`${values.email}`}{" "}
-                          </div>{" "}
+                          <div className="header__mail">{`${values.email}`}</div>
                           <div
                             className="header__sign-button"
                             onClick={() => {
@@ -237,10 +227,10 @@ function App() {
                               navigate("/react-around-auth/signin");
                             }}
                           >
-                            Log Out{" "}
-                          </div>{" "}
-                        </div>{" "}
-                      </Header>{" "}
+                            Log Out
+                          </div>
+                        </div>
+                      </Header>
                       <Main
                         onEditAvatarClick={handleEditAvatarClick}
                         onEditProfileClick={handleEditProfileClick}
@@ -250,14 +240,15 @@ function App() {
                         onCardLike={handleCardLike}
                         onTrashClick={handleTrashClick}
                         onCardDelete={handleCardDelete}
-                      />{" "}
+                      />
                       <Footer />
                     </>
                   }
                   isLoggedIn={isLoggedIn}
                 />
               }
-            />{" "}
+            />
+
             <Route
               path="/react-around-auth/signup"
               element={
@@ -266,7 +257,8 @@ function App() {
                   onSubmit={handleRegisterSubmit}
                 />
               }
-            />{" "}
+            />
+
             <Route
               path="/react-around-auth/signin"
               element={
@@ -275,43 +267,49 @@ function App() {
                   onSubmit={handleAuthorizeSubmit}
                 />
               }
-            />{" "}
-          </Routes>{" "}
-        </div>{" "}
+            />
+          </Routes>
+        </div>
+
         <InfoTooltip
           popupName={"registration-info"}
           isOpen={isInfoTooltipOpen}
           onClose={closeAllPopups}
           isRegistrationSucceeded={isRegistrationSucceeded}
-        />{" "}
+        />
+
         <EditAvatarPopup
           isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}
           onUpdateAvatar={handleUpdateAvatar}
-        />{" "}
+        />
+
         <EditProfilePopup
           isOpen={isEditProfilePopupOpen}
           onClose={closeAllPopups}
           onUpdateUser={handleUpdateUser}
-        />{" "}
+        />
+
         <AddPlacePopup
           isOpen={isAddPlacePopupOpen}
           onClose={closeAllPopups}
           onAddPlaceSubmit={handleAddPlaceSubmit}
-        />{" "}
+        />
+
         <VerifyDeletePopup
           isOpen={isVerifyDeletePopupOpen}
           cardForDelete={cardForDelete}
           onClose={closeAllPopups}
           onConfirmDeleteClick={handleCardDelete}
-        />{" "}
+        />
+
         <ImagePopup
           popupName={"card-image"}
           isCardPopupOpen={isCardPopupOpen}
           cardForImagePopup={cardForImagePopup}
           onClose={closeAllPopups}
-        />{" "}
-      </div>{" "}
+        />
+      </div>
     </CurrentUserContext.Provider>
   );
 }
