@@ -22,6 +22,12 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.use(express.static(__dirname));
+
+app.get("/*", function(req, res) {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.options('*', cors());
 
 app.get('/crash-test', () => {
