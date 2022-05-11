@@ -201,7 +201,7 @@ function App() {
         }
       }
     })();
-  });
+  }, [jwt]);
 
   useEffect(() => {
     if (isLoggedIn) {
