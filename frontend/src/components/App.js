@@ -185,6 +185,7 @@ function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token"));
 
   useEffect(() => {
+    if (!jwt) return;
     (async function () {
       setJwt(localStorage.getItem("jwt"));
       if (jwt) {
