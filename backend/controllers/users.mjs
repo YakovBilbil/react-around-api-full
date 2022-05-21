@@ -10,6 +10,8 @@ import {
     AuthError
 } from "../utils/errorsHandle.mjs";
 
+import 'dotenv/config';
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 
 const getUsers = async(req, res) => {
