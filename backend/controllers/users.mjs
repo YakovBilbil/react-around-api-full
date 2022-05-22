@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+import { NODE_ENV, JWT_SECRET } from "../utils/config.mjs"
 import User from "../models/user.mjs";
 import {
     INVALID_DATA_ERROR,
@@ -9,9 +10,6 @@ import {
     NotFoundError,
     AuthError
 } from "../utils/errorsHandle.mjs";
-
-import 'dotenv/config';
-const { NODE_ENV, JWT_SECRET } = process.env;
 
 
 const getUsers = async(req, res) => {

@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 import { AuthRequiredError } from "../utils/errorsHandle.mjs";
+import { NODE_ENV, JWT_SECRET } from "../utils/config.mjs"
+
 
 export default (req, res, next) => {
     const { authorization } = req.headers;
@@ -9,7 +11,7 @@ export default (req, res, next) => {
         const token = authorization.replace('Bearer ', '');
         let payload;
         try {
-            payload = jwt.verify(token, 'some-secret-key');
+            payload = jwt.verify(token, NODE_ENV === "production" ? JWT_SECRET : "dev-secret");
             if (!payload) {
                 throw new AuthRequiredError("Authorization required");
             }
