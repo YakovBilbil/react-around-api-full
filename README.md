@@ -8,4 +8,4 @@ This repository contains the full API of "Around the U.S." project that features
 <https://github.com/YakovBilbil/react-around-api-full.git>
 
 * a link to the website that hosts the API:
- <www.yakovbilbilproj15.students.nomoredomainssbs.ru/react-around-auth/>
+ <www.yakovBilbilProj15.students.nomoredomainssbs.ru>
